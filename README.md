@@ -1,10 +1,2 @@
 # CIRCLE CI TEST
-afdsghadsfgasfdgh
-hfhsdfhsdfhdfhdrhjgtrhrh
-gdgdsgsg
-hddddddddfhgjh
-cfasfcadsfasf
-hffjmfxmnjhmnfnhdfgd
-hjtujuhycfnutenyhtfdasfgadsfgAFgdfgsfgfg
-fd
-gvgdgsghsdfsdf
+Welcome to the Circle CI Test
