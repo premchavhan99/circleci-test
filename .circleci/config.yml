@@ -14,9 +14,12 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: "node --version"
+      - run:|
+        git config --list
+        echo "test2" >> README.md
+        git add .
+        git commit -m "updated Readme.md"
+        git push origin circleci-project-setup
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
