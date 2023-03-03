@@ -18,10 +18,10 @@ jobs:
          name: "Say hello"
          command: |
           git config --list
-          echo "test2" >> README.md
-          git add .
-          git commit -m "updated Readme.md"
-          git push origin circleci-project-setup
+          #echo "test2" >> README.md
+          #git add .
+          #git commit -m "updated Readme.md"
+          #git push origin circleci-project-setup
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
