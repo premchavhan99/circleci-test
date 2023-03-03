@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
          name: "Say hello"
-         command:|
+         command: |
           git config --list
           echo "test2" >> README.md
           git add .
