@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         id: work_done
-        run: echo "Hello, world!"
+        run: pwd
          # echo ${{ github.ref_name }}
          # Branch="test/branch/name"
          # echo "TAG=${Branch////_}"
@@ -51,7 +51,7 @@ jobs:
         with:
           to: 'ahkfxyv@gmail.com'
           subject: 'building main'
-          body: "Body with response: ${{ steps.work_done.outputs.stdout }} "
+          body: '${{ steps.work_done.outputs.stdout }}'
 
       # - name: "Mail Output"
       #   run: |
