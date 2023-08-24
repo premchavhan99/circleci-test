@@ -51,7 +51,7 @@ jobs:
         with:
           to: 'ahkfxyv@gmail.com'
           subject: 'building main'
-          body: 'Body with response:${{ steps.response }}"'
+          body: "Body with response:${{ steps.response }}"
 
       # - name: "Mail Output"
       #   run: |
