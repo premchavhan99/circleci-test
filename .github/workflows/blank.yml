@@ -47,4 +47,4 @@ jobs:
         with:
           to: 'ahkfxyv@gmail.com'
           subject: 'building main'
-          body: 'Body with response:${{ steps.response.outputs.result }}'
+          body: 'Body with response:${{ steps.response.outputs.stdout }}'
