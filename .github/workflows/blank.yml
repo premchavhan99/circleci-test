@@ -51,9 +51,9 @@ jobs:
       #   with:
       #     to: 'ahkfxyv@gmail.com'
       #     subject: 'building main'
-      #     body: 'Body with response:${{ steps.response.outputs.stdout }}'
+      #     body: 'Body with response:${{ steps.response.outputs.result }}"'
 
       - name: "Mail Output"
         run: |
           sudo apt-get install mailutils
-          echo "Body with version-update:${{ steps.response.outputs.result }}" | mail -s "Successfully pushed to main" ahkfxyv@gmail.com
+          echo "Body with version-update:Hello, world" | mail -s "Successfully pushed to main" ahkfxyv@gmail.com
