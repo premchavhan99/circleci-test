@@ -46,14 +46,14 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      # - name: "Mail Output"
-      #   uses: cinotify/github-action@main
-      #   with:
-      #     to: 'ahkfxyv@gmail.com'
-      #     subject: 'building main'
-      #     body: 'Body with response:${{ steps.response.outputs.result }}"'
-
       - name: "Mail Output"
-        run: |
-          sudo apt-get install mailutils
-          echo "Body with version-update:Hello, world" | mail -s "Successfully pushed to main" ahkfxyv@gmail.com
+        uses: cinotify/github-action@main
+        with:
+          to: 'ahkfxyv@gmail.com'
+          subject: 'building main'
+          body: 'Body with response:${{ steps.response.outputs.result }}"'
+
+      # - name: "Mail Output"
+      #   run: |
+      #     sudo apt-get install mailutils
+      #     echo "Body with version-update:Hello, world" | mail -s "Successfully pushed to main" ahkfxyv@gmail.com
