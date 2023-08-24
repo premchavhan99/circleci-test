@@ -37,7 +37,7 @@ jobs:
          
       - name: Store Plan Output
         id: response
-        run: echo "::set-output name=result::$(cat demo)"
+        run: echo "::set-output name=my_output::hello----"
 
         
       # Runs a set of commands using the runners shell
@@ -51,7 +51,7 @@ jobs:
         with:
           to: 'ahkfxyv@gmail.com'
           subject: 'building main'
-          body: "Body with response: ${{ steps.response.outputs.stdout }} "
+          body: "Body with response: ${{ steps.response.outputs.my_output }} "
 
       # - name: "Mail Output"
       #   run: |
