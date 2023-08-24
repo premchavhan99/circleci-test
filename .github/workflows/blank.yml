@@ -27,6 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        id: response
         run: |
          echo Hello, world!
          echo ${{ github.ref_name }}
@@ -34,10 +35,10 @@ jobs:
          echo "TAG=${Branch////_}"
          echo ${{ github.event.head_commit.message }}
          echo ${{ github.event.repository.name }}
-         echo ${{ steps.response.outputs.result }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo ${{ steps.response.outputs.result }}
