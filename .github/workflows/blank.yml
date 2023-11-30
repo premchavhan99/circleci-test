@@ -40,6 +40,17 @@ jobs:
          echo ${{ github.event.repository.name }}
          echo ${{ steps.login-ecr.outputs.registry }}
          
+      - uses: toko-bifrost/ms-teams-deploy-card@master #  or "./" if in a local set-up
+        if: always()
+        with:
+          github-token: ${{ github.token }}
+          webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
+          card-layout-start: compact
+          card-layout-exit: complete
+          show-on-start: false
+          show-on-exit: true
+          show-on-failure: true
+         
       - name: Store Plan Output
         id: response
         run: |
